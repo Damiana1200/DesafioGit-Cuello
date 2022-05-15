@@ -7,7 +7,7 @@
 body{
 	font-size: 15px;
 	font-family: 'Roboto Condensed', sans-serif;
-	background-color: black;
+	background: linear-gradient(to left, black, lightblue);
 	color: white;
 }
 .header-container{
@@ -32,4 +32,129 @@ body{
 	background-color: white;
 	border-style: solid;
 	position: fixed;
+}
+.navegacion{
+	background-color: black;
+	color:  lightpink;
+}
+.navegacion:hover{
+	background-color: lightpink;
+	color:  black;
+}
+.carrousel{
+	overflow: hidden;
+	padding: 40px;
+	margin: 60px;
+}
+@keyframes zoom{
+	0%{
+		transform:  scale(1);
+	}
+	100%{
+		transform:  scale(1.2);
+	}
+}
+.carrousel img{
+	animation-name: zoom;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	animation-duration: 7s;
+	animation-delay: 0;
+	animation-fill-mode: forwards;
+}
+@keyframes anima{
+	0%{
+		transform:  translateY(0);
+	}
+	50%{
+		transform: translateY(30px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+@keyframes rotando{
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+.fondo{
+	background-image: url(.../assets/Venadito.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	position: relative;
+}
+.venadito{
+	position: absolute;
+	width: 100px;
+	top: 200px;
+	left: 200px;
+}
+.venadito img{
+	width: 100%;
+	animation-name: anima, rotando;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-duration: 5s, 10s;
+}
+form{
+	padding: 40px;
+}
+form:focus-within{
+	background-color: rgba(0,0,0,.5);
+}
+.inps{
+	border: 1px solid powderblue;
+	border-radius: 5px;
+	font-size: 1rem;
+	height: 2em;
+	background-color: lightcyan;
+}
+.inps:focus{
+	background-color: lightgreen;
+}
+input {
+	width: 100px; 
+	height: 100px;
+	transition: all 2s;
+}
+.contenido{
+	padding:  20px;
+	padding-top: 100px;
+}
+.contenedor{
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+}
+.item{
+	width: 33.33333%;
+	padding: 20px;
+	box-sizing: border-box;
+	transition: all 250ms;
+}
+.item:hover{
+	transform: scale(1.1);
+}
+.item:hover img{
+	box-shadow: undefinedpx undefinedpx 5px 3px rgba(0,0,0,2);
+}
+}
+p{
+	font-size: 1rem;
+	padding: 0 1rem;
+}
+.subtitulo{
+	font-size: 1.2rem;
+	padding: 0 1rem;
+	margin-top: 1em;
+}
+.footer{
+	background-color: white;
+	color:  black;
+	height: 25vh;
 }
